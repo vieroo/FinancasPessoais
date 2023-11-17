@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One&family=Poppins&family=Righteous&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.bg  {
+  height: 100vh;
+  background-color: #eec044;
+}
+
+.bg-login {
+  height: 75vh;
+  background-color: rgb(39, 39, 39);
+  border-radius: 20px;
+  -webkit-box-shadow: -1px 6px 16px 0px rgb(104, 82, 23);
+  -moz-box-shadow: -1px 6px 16px 0px rgb(104, 82, 23);
+  box-shadow: -1px 6px 16px 0px rgb(104, 82, 23);
+}
+
+.login-left {
+  height: 75vh;
+  border-radius: 20px 0px 0px 20px ;
+  background-color: rgb(39, 39, 39);
+  background-image: url('/img/fundo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.login-right {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+
+.title {
+  text-align: center;
+  margin: 0px 0px 60px 0px;
+  font-family: 'Righteous', sans-serif;
+}
+
+.title > h1 {
+  font-size: 60px;
+}
+
+span {
+  color: #eec044;
+  font-family: 'Chau Philomene One', sans-serif;
+  font-size: 90px;
+}
+
+.labels {
+  padding: 10px;
+  font-family: 'Righteous', sans-serif;
+}
+
+input {
+  background-color: rgb(51, 51, 51);
+}
