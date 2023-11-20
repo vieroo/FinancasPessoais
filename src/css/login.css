@@ -24,7 +24,7 @@
   height: 75vh;
   border-radius: 20px 0px 0px 20px ;
   background-color: rgb(39, 39, 39);
-  background-image: url('../img/fundo.jpg');
+  background-image: url('../../img/fundo.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
