@@ -4,6 +4,7 @@ document.getElementById('doLogin').addEventListener('click', () => {
 
   if (username === 'admin' && password === 'admin') {
     alert('Login efetuado com sucesso')
+    window.location.href='home.html'
   } else {
     alert('Usuario ou senha incorretos')
   }
