@@ -71,6 +71,7 @@ span {
 input {
   border: none;
   border-bottom: 2px solid #FFDA0F;
+  color: white;
   background: transparent;
   font-size: 25px;
   width: 250px;
