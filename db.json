@@ -1,0 +1,47 @@
+{
+    "users":[
+        {
+            "id":1,
+            "login":"duduviero",
+            "password":1234,
+            "nome": "Eduardo Vidal Viero",
+            "accountType": "premium"
+        },{
+            "id":2,
+            "login":"joselucass",
+            "password":1234,
+            "nome": "José Lucas",
+            "accountType": "default"
+        },{
+            "id":3,
+            "login":"godas",
+            "password":1234,
+            "nome":"Matheus Godoy",
+            "accountType": "default"
+        },{
+            "id":4,
+            "login":"ozogui",
+            "password":1234,
+            "nome":"Guilherme Ozogovski",
+            "accountType": "default"
+        },{
+            "id":5,
+            "login":"leafarel",
+            "password":1234,
+            "nome":"Rafael Lima Dalmagro",
+            "accountType": "premium"
+        },{
+            "id":6,
+            "login":"maripf",
+            "password":1234,
+            "nome":"Marilia",
+            "accountType": "premium"
+        },{
+            "id":7,
+            "login": "jpbiasi",
+            "password":1234,
+            "nome": "João Biasi",
+            "accountType": "default"
+        }
+    ]
+}
