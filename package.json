@@ -1,0 +1,15 @@
+{
+  "name": "financaspessoais",
+  "version": "1.0.0",
+  "description": "Aplicacao de Financas Pessoais para o curso de SI",
+  "main": "index.js",
+  "scripts": {
+    "serve": "json-server --watch db.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eduardo Viero, Rafael Lima Dalmagro, Jose Lucas Franco",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}
