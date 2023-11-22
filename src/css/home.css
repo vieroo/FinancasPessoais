@@ -8,21 +8,20 @@
 
 main {
   height: 100vh;
-  background-color: #1c1a1d;
 }
 
 .navbar {
-  background-color: #eec044;
+  background-color: #0f0f0f;
 }
 
 .logo h1 {
   font-family: 'Righteous', sans-serif;
   font-size: 25px;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .title > span {
-  color: white;
+  color: #FFDA0F;
   font-family: 'Chau Philomene One', sans-serif;
   font-size: 25px;
 }

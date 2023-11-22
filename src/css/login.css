@@ -24,11 +24,13 @@
   height: 75vh;
   border-radius: 20px 0px 0px 20px ;
   background-color: rgb(39, 39, 39);
-  background-image: url('../../img/fundo.jpg');
+  background-image: url('../components/img/logos/logo11.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border-right: solid 2px whitesmoke;
 }
+
 
 .login-right {
   text-transform: uppercase;
@@ -51,7 +53,7 @@
 }
 
 span {
-  color: #eec044;
+  color: #FFDA0F;
   font-family: 'Chau Philomene One', sans-serif;
   font-size: 90px;
 }
@@ -68,7 +70,8 @@ span {
 
 input {
   border: none;
-  border-bottom: 2px solid #eec044;
+  border-bottom: 2px solid #FFDA0F;
+  color: white;
   background: transparent;
   font-size: 25px;
   width: 250px;
@@ -85,7 +88,7 @@ input:focus {
 .button {
   text-transform: uppercase;
   color: white;
-  background-color: #eec044;
+  background-color: #FFDA0F;
   text-decoration: none;
   font-family: 'Righteous', sans-serif;
   margin-top: 2rem;
