@@ -85,6 +85,15 @@ input:focus {
   transform: scale(1.08);
 }
 
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px rgb(39, 39, 39) inset;
+}
+
+/* Cor do texto do autocomplete */
+input:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
+}
+
 .button {
   text-transform: uppercase;
   color: black;
