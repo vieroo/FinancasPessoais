@@ -13,8 +13,7 @@ main a{
 main {
   height: 100vh;
 }
-
-.div1,.div2{
+.div1,.div2, .div3{
   background-color:rgb(0, 0, 0, 0.8);
   color: whitesmoke;
   border-radius: 10px;
