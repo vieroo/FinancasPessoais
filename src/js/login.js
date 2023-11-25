@@ -2,9 +2,6 @@ document.getElementById('doLogin').addEventListener('click', () => {
   let username = document.getElementById('username').value
   let password = document.getElementById('password').value
 
-  console.log(username)
-  console.log(password)
-
   getLogin(username, password)
 })
 
@@ -22,7 +19,6 @@ function erroOnLogin() {
   erroLogin.appendChild(p)
   document.getElementById('password').value = ''
 }
-
 
 async function getLogin(username, password) {
   fetch('http://localhost:3000/users')
