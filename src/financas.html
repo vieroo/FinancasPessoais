@@ -12,6 +12,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/4824b67801.js" crossorigin="anonymous"></script>
   <script src="./js/home.js" defer></script>
 </head>
 
@@ -33,6 +34,7 @@
         <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
           <div class="navbar-nav text-center">
             <a class="nav-link active text-light" aria-current="page" href="./home.html">Home</a>
+            <a class="nav-link active text-light" aria-current="page" href="./financas.html">Minhas Finanças</a>
             <a class="nav-link active text-light" aria-current="page" href="./quemSomos.html">Quem somos?</a>
             <a class="nav-link active text-light" aria-current="page" href="./login.html">Sair</a>
           </div>
@@ -41,8 +43,45 @@
     </nav>
   </header>
 
-  <main class="">
-    
+  <main class="finances">
+    <div class="row my-3">
+      <div class="col-12 text-center">
+        <h1>Minhas Finanças</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-4 create-transaction">
+          <div class="title">
+            <i class="fa-solid fa-money-bill-transfer" style="color: #FFDA0F;"></i>
+            <h2>Adicionar Transação</h2>
+          </div>
+          <div class="transaction-name mx-4">
+            <input type="hidden" id="transaction-id">
+            <label for="transaction-name" class="transaction-label">Nome:</label> <br>
+            <input type="text" id="transaction-name">
+          </div>
+          <div class="transaction-value mx-4">
+            <label for="transaction-value" class="transaction-label">Valor:</label> <br>
+            <input type="number" id="transaction-value">
+          </div>
+          <label for="transaction-type" class=" mx-4">Tipo:</label>
+          <div class="types mx-4">
+            <div class="type-credit">
+              <input type="radio" name="transaction-type" id="credit" checked>
+              <label for="transaction-type-credit" id="outcome">Despesa</label>
+            </div>
+            <div class="type-debit">
+              <input type="radio" name="transaction-type" id="debit">
+              <label for="transaction-type-debit" id="income">Receita</label>
+            </div>
+          </div>
+          <div class="submit-transaction">
+            <button type="submit" id="save-transaction">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
 </body>

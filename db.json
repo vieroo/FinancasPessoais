@@ -46,13 +46,17 @@
             "id":8,
             "login": "admin",
             "password":"admin",
-            "nome": "João Biasi",
-            "accountType": "default"
+            "nome": "Administrador",
+            "accountType": "administrator"
         }
     ],
-    "data":[
+    "transactions":[
         {
-            
+            "id": 1,
+            "name": "Freelancer",
+            "value": 100,
+            "type": "credit",
+            "user": "admin"
         }
     ]
 

@@ -34,3 +34,99 @@ main {
   font-family: 'Righteous', sans-serif;
   font-size: 20px;
 }
+
+h1 {
+  margin: 10px 0px;
+  font-family: 'Righteous', sans-serif;
+}
+
+.create-transaction {
+  display: flex;
+  background-color: #0f0f0f;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 10px;
+  border-radius: 4px;
+  padding: 10px 0px;
+  font-family: 'Chau Philomene One', sans-serif;
+  font-size: 20px;
+  color: white;
+  -webkit-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.title {
+  text-align: center;
+  font-size: 40px;
+  padding: 15px 0px;
+}
+
+h2 {
+  font-family: 'Righteous', sans-serif;
+  text-align: center;
+}
+
+#transaction-name {
+  border: none;
+  background-color: #0f0f0f;
+  border-bottom: 2px solid #FFDA0F;
+  line-height: 1.2;
+  margin: 5px 0px;
+}
+
+#transaction-name:focus {
+  color: white;
+  font-size: 18px;
+  outline: none;
+}
+
+#transaction-value {
+  border: none;
+  background-color: #0f0f0f;
+  border-bottom: 2px solid #FFDA0F;
+  line-height: 1.2;
+  margin: 5px 0px;
+}
+
+#transaction-value:focus {
+  color: white;
+  font-size: 18px;
+  outline: none;
+}
+
+#credit {
+  accent-color: #FFDA0F;
+}
+
+#debit {
+  accent-color: #FFDA0F;
+}
+
+.submit-transaction {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+}
+
+#save-transaction {
+  width: 100px;
+  text-transform: uppercase;
+  color: black;
+  background-color: #FFDA0F;
+  text-decoration: none;
+  font-family: 'Righteous', sans-serif;
+  font-size: 14px;
+  margin: 10px 0px;
+  padding: 4px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#save-transaction:hover {
+  width: 100px;
+  color:  white;
+  transform: scale(1.1);
+}
