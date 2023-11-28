@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One&family=Poppins&family=Righteous&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+main a{
+  text-decoration: none;
+  color: #FFDA0F;
+}
+
+main {
+  height: 100vh;
+}
+.div1,.div2, .div3{
+  background-color:rgb(0, 0, 0, 0.8);
+  color: whitesmoke;
+  border-radius: 10px;
+}
+
+.navbar {
+  background-color: #0f0f0f;
+}
+
+.logo h1 {
+  font-family: 'Righteous', sans-serif;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+}
+
+.title > span {
+  color: #FFDA0F;
+  font-family: 'Chau Philomene One', sans-serif;
+  font-size: 25px;
+}
+
+.navbar-nav {
+  font-family: 'Righteous', sans-serif;
+  font-size: 20px;
+}

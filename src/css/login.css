@@ -85,21 +85,36 @@ input:focus {
   transform: scale(1.08);
 }
 
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px rgb(39, 39, 39) inset;
+}
+
+/* Cor do texto do autocomplete */
+input:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
+}
+
 .button {
   text-transform: uppercase;
-  color: white;
+  color: black;
   background-color: #FFDA0F;
   text-decoration: none;
   font-family: 'Righteous', sans-serif;
   margin-top: 2rem;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   padding: 10px;
-  border: none;
+  border: 2px solid black;
   border-radius: 8px;
   cursor: pointer;
 }
 
 .button:hover {
   transform: scale(1.1);
+  color: white;
+  border: 2px solid white;
+}
+
+.erroLogin {
+  color: red;
 }

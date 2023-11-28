@@ -5,9 +5,19 @@
   margin: 0;
   padding: 0;
 }
+main a{
+  text-decoration: none;
+  color: #FFDA0F;
+}
 
 main {
   height: 100vh;
+}
+
+.div1,.div2{
+  background-color:rgb(0, 0, 0, 0.8);
+  color: whitesmoke;
+  border-radius: 10px;
 }
 
 .navbar {
