@@ -1,6 +1,7 @@
 document.getElementById('doLogin').addEventListener('click', () => {
   let username = document.getElementById('username').value
   let password = document.getElementById('password').value
+  localStorage.setItem("username", username)
 
   getLogin(username, password)
 })
