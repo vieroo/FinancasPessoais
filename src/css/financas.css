@@ -18,6 +18,10 @@ main {
   background-color: #0f0f0f;
 }
 
+.nav-link:hover {
+  color: #FFDA0F !important;
+}
+
 .logo h1 {
   font-family: 'Righteous', sans-serif;
   font-size: 25px;
@@ -57,9 +61,12 @@ h1 {
 }
 
 .title {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
   font-size: 40px;
-  padding: 15px 0px;
 }
 
 h2 {
@@ -67,7 +74,27 @@ h2 {
   text-align: center;
 }
 
+.create-transaction-data {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.transaction-name, .transaction-value, .types, .type-credit, .type-debit {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  justify-content: space-between;
+}
+
+.type-credit, .type-debit {
+  margin: 0px 15px;
+}
+
 #transaction-name {
+  color: white;
   border: none;
   background-color: #0f0f0f;
   border-bottom: 2px solid #FFDA0F;
@@ -82,6 +109,7 @@ h2 {
 }
 
 #transaction-value {
+  color: white;
   border: none;
   background-color: #0f0f0f;
   border-bottom: 2px solid #FFDA0F;
@@ -95,11 +123,8 @@ h2 {
   outline: none;
 }
 
-#credit {
-  accent-color: #FFDA0F;
-}
 
-#debit {
+#credit,#debit {
   accent-color: #FFDA0F;
 }
 
@@ -129,4 +154,31 @@ h2 {
   width: 100px;
   color:  white;
   transform: scale(1.1);
+}
+
+.show-transactions {
+  display: flex;
+  background-color: #0f0f0f;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 10px;
+  border-radius: 4px;
+  padding: 10px 0px;
+  font-family: 'Chau Philomene One', sans-serif;
+  font-size: 20px;
+  color: white;
+  -webkit-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.logo-balance {
+  font-size: 40px;
+}
+
+.show-balance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
 }

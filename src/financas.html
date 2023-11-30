@@ -51,29 +51,31 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-4 create-transaction">
+        <div class="col create-transaction">
           <div class="title">
             <i class="fa-solid fa-money-bill-transfer" style="color: #FFDA0F;"></i>
             <h2>Adicionar Transação</h2>
           </div>
-          <div class="transaction-name mx-4">
-            <input type="hidden" id="transaction-id">
-            <label for="transaction-name" class="transaction-label">Nome:</label> <br>
-            <input type="text" id="transaction-name">
-          </div>
-          <div class="transaction-value mx-4">
-            <label for="transaction-value" class="transaction-label">Valor:</label> <br>
-            <input type="number" id="transaction-value">
-          </div>
-          <label for="transaction-type" class=" mx-4">Tipo:</label>
-          <div class="types mx-4">
-            <div class="type-credit">
-              <input type="radio" name="transaction-type" id="credit" checked>
-              <label for="transaction-type-credit" id="outcome">Despesa</label>
+          <div class="create-transaction-data">
+            <div class="transaction-name mx-4">
+              <input type="hidden" id="transaction-id">
+              <label for="transaction-name" class="transaction-label">Nome:</label> <br>
+              <input type="text" id="transaction-name">
             </div>
-            <div class="type-debit">
-              <input type="radio" name="transaction-type" id="debit">
-              <label for="transaction-type-debit" id="income">Receita</label>
+            <div class="transaction-value mx-4">
+              <label for="transaction-value" class="transaction-label">Valor:</label> <br>
+              <input type="number" id="transaction-value">
+            </div>
+            <div class="types mx-4">
+              <div class="type-credit">
+                <label for="transaction-type" class=" mx-4">Tipo:</label>
+                <input type="radio" name="transaction-type" id="credit" checked>
+                <label for="transaction-type-credit" id="outcome">Despesa</label>
+              </div>
+              <div class="type-debit">
+                <input type="radio" name="transaction-type" id="debit">
+                <label for="transaction-type-debit" id="income">Receita</label>
+              </div>
             </div>
           </div>
           <div class="submit-transaction">
@@ -81,13 +83,14 @@
           </div>
         </div>
 
-        <div class="col-8 show-transactions">
-          <div class="show-balance">
-            <i class="fa-solid fa-money-bill-trend-up" style="color: #FFDA0F;"></i>
-            <h2>Saldo: <span id="balance"></span></h2>
-          </div>
-          <div class="transactions-history">
-
+        <div class="row my-3">
+          <div class="col show-transactions">
+            <div class="show-balance">
+              <i class="fa-solid fa-money-bill-trend-up logo-balance" style="color: #FFDA0F;"></i>
+              <h2>Saldo: <span id="balance"></span></h2>
+            </div>
+            <div class="transactions-history">
+            </div>
           </div>
         </div>
       </div>
