@@ -52,11 +52,10 @@
     ],
     "transactions":[
         {
-            "id": 1,
-            "name": "Freelancer",
-            "value": 100,
-            "type": "credit",
-            "user": "admin"
+            "transactionID": 1,
+            "transactionName": "Freelancer",
+            "transactionValue": 100,
+            "transactionType": "credit"
         }
     ]
 

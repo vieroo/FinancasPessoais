@@ -78,7 +78,7 @@ async function saveTransaction(ev) {
     const transaction = await response.json()
     const indexToRemove = transactions.findIndex((t) => t.index === transactionID)
     transactions.splice(indexToRemove, 1, transaction)
-    document.querySelector(`#transaction=${transactionID}`).remove()
+    document.querySelector(`#transaction-${transactionID}`).remove()
     renderTransaction(transaction)
 
   } else {
