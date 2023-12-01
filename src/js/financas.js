@@ -2,10 +2,10 @@ let transactions = []
 
 
 
-function createTransactionContainer(transactionID) {
+function createTransactionContainer(id) {
   const container = document.createElement('div')
   container.classList.add('transaction')
-  container.id = `transaction-${transactionID}`
+  container.id = `transaction-${id}`
   return container
 }
 
@@ -25,7 +25,7 @@ function createTransactionValue(transactionValue, transactionType) {
 
   const formater = new Intl.NumberFormat('pt-BR', {
     compactDisplay: 'long',
-    style: 'curerncy',
+    style: 'currency',
     currency: 'BRL'
   })
 
@@ -47,8 +47,8 @@ function createTransactionValue(transactionValue, transactionType) {
 // Renderizar/Mostrar transações na tela
 function renderTransaction(transaction) {
   const container = createTransactionContainer(transaction.id)
-  const name = createTransactionName(transaction.name)
-  const value = createTransactionValue(transaction.value, transaction.type)
+  const name = createTransactionName(transaction.transactionName)
+  const value = createTransactionValue(transaction.transactionValue, transaction.transactionType)
 
   container.append(name, value)
   document.querySelector('#transactions-history').append(container)
@@ -60,14 +60,21 @@ function renderTransaction(transaction) {
 async function saveTransaction(ev) {
   ev.preventDefault()
 
-  const transactionID = document.getElementById('transaction-id')
+  const id = document.getElementById('transaction-id').value
   const transactionName = document.getElementById('transaction-name').value
   const transactionValue = parseFloat(document.getElementById('transaction-value').value)
-  const transactionType = document.querySelector('input[name="transaction-type"]::checked').id
+  const transactionType = document.querySelector('input[name="transaction-type"]:checked').id
+
+  // Verificar se é despesa ou receita
+  // if (transactionType === 'debit') {
+  //   transactionValue = -(transactionValue)
+  // } else {
+  //   transactionValue = +(transactionValue)
+  // }
 
 
   // Verifica se já existe transacao, se tiver atualiza o valor
-  if (transactionID) {
+  if (id) {
     const response = await fetch(`http://localhost:3000/transactions/${id}`, {
       method: 'PUT',
       body: JSON.stringify({ transactionName, transactionValue, transactionType}),
@@ -76,9 +83,9 @@ async function saveTransaction(ev) {
       }
     })
     const transaction = await response.json()
-    const indexToRemove = transactions.findIndex((t) => t.index === transactionID)
+    const indexToRemove = transactions.findIndex((t) => t.index === id)
     transactions.splice(indexToRemove, 1, transaction)
-    document.querySelector(`#transaction-${transactionID}`).remove()
+    document.querySelector(`#transaction-${id}`).remove()
     renderTransaction(transaction)
 
   } else {
@@ -96,6 +103,26 @@ async function saveTransaction(ev) {
     renderTransaction(transaction)
   }
 
-  ev.target.reset()
+  //ev.target.reset()
   //updateBalance() // Atualizar o valor do saldo, falta criar ainda
 }
+
+
+
+// Buscar retorno transações
+async function fetchTransaction(){
+  return await fetch('http://localhost:3000/transactions').then((res) => res.json())
+}
+
+
+
+async function setup(){
+  const results = await fetchTransaction()
+  transactions.push(...results)
+  transactions.forEach(renderTransaction)
+}
+
+
+
+document.addEventListener('DOMContentLoaded', setup)
+document.querySelector('form').addEventListener('submit', saveTransaction)
