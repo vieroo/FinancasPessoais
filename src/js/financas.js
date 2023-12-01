@@ -20,9 +20,38 @@ function createTransactionName(transactionName) {
 
 
 
-function createTransactionValue(transactionValue) {
+function createTransactionValue(transactionValue, transactionType) {
   const value = document.createElement('span')
 
+  const formater = new Intl.NumberFormat('pt-BR', {
+    compactDisplay: 'long',
+    style: 'curerncy',
+    currency: 'BRL'
+  })
+
+  const valueFormated = formater.format(transactionValue)
+
+  if (transactionType === 'debit') {
+    value.textContent = `${valueFormated}`
+    value.classList.add('transaction-value', 'debit')
+  } else {
+    value.textContent = `${valueFormated}`
+    value.classList.add('transaction-value', 'credit')
+  }
+
+  return value
+}
+
+
+
+// Renderizar/Mostrar transações na tela
+function renderTransaction(transaction) {
+  const container = createTransactionContainer(transaction.id)
+  const name = createTransactionName(transaction.name)
+  const value = createTransactionValue(transaction.value, transaction.type)
+
+  container.append(name, value)
+  document.querySelector('#transactions-history').append(container)
 }
 
 
@@ -50,7 +79,7 @@ async function saveTransaction(ev) {
     const indexToRemove = transactions.findIndex((t) => t.index === transactionID)
     transactions.splice(indexToRemove, 1, transaction)
     document.querySelector(`#transaction=${transactionID}`).remove()
-    //renderTransaction(transaction) // faltar criar essa funcao
+    renderTransaction(transaction)
 
   } else {
     // Criar uma nova transacao
@@ -64,7 +93,7 @@ async function saveTransaction(ev) {
 
     const transaction = await response.json()
     transactions.push(transaction)
-    //renderTransaction(transaction)
+    renderTransaction(transaction)
   }
 
   ev.target.reset()
