@@ -62,15 +62,10 @@ async function saveTransaction(ev) {
 
   const id = document.getElementById('transaction-id').value
   const transactionName = document.getElementById('transaction-name').value
-  const transactionValue = parseFloat(document.getElementById('transaction-value').value)
+  let transactionValue = parseFloat(document.getElementById('transaction-value').value)
   const transactionType = document.querySelector('input[name="transaction-type"]:checked').id
 
-  // Verificar se é despesa ou receita
-  // if (transactionType === 'debit') {
-  //   transactionValue = -(transactionValue)
-  // } else {
-  //   transactionValue = +(transactionValue)
-  // }
+  transactionValue = transactionType === 'debit' ? -(transactionValue) : +(transactionValue);
 
 
   // Verifica se já existe transacao, se tiver atualiza o valor
