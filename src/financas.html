@@ -13,7 +13,7 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/4824b67801.js" crossorigin="anonymous"></script>
-  <script src="./js/home.js" defer></script>
+  <script src="./js/financas.js" defer></script>
 </head>
 
 <body>
@@ -51,7 +51,7 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col create-transaction">
+        <div class="col-12 create-transaction">
           <div class="title">
             <i class="fa-solid fa-money-bill-transfer" style="color: #FFDA0F;"></i>
             <h2>Adicionar Transação</h2>
@@ -82,15 +82,19 @@
             <button type="submit" id="save-transaction">Salvar</button>
           </div>
         </div>
+      </div>
 
-        <div class="row my-3">
-          <div class="col show-transactions">
-            <div class="show-balance">
-              <i class="fa-solid fa-money-bill-trend-up logo-balance" style="color: #FFDA0F;"></i>
-              <h2>Saldo: <span id="balance"></span></h2>
-            </div>
-            <div class="transactions-history">
-            </div>
+      <div class="row my-3">
+        <div class="col show-transactions">
+          <div class="title">
+            <i class="fa-solid fa-money-bill-trend-up logo-balance" style="color: #FFDA0F;"></i>
+            <h2>Histórico de Transações</h2>
+          </div>
+          <div class="show-balance">
+            <h3>Saldo: <span id="balance"></span></h3>
+          </div>
+          <div class="transactions-history">
+            <div class="transaction-"></div>
           </div>
         </div>
       </div>

@@ -1,6 +1,32 @@
 let transactions = []
 
 
+
+function createTransactionContainer(transactionID) {
+  const container = document.createElement('div')
+  container.classList.add('transaction')
+  container.id = `transaction-${transactionID}`
+  return container
+}
+
+
+
+function createTransactionName(transactionName) {
+  const name = document.createElement('p')
+  name.classList.add('transaction-name')
+  name.textContent = transactionName
+  return name
+}
+
+
+
+function createTransactionValue(transactionValue) {
+  const value = document.createElement('span')
+
+}
+
+
+
 // Função para salvar as transações
 async function saveTransaction(ev) {
   ev.preventDefault()

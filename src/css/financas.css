@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
 }
+
 main a{
   text-decoration: none;
   color: #FFDA0F;
@@ -93,38 +94,23 @@ h2 {
   margin: 0px 15px;
 }
 
-#transaction-name {
-  color: white;
-  border: none;
-  background-color: #0f0f0f;
-  border-bottom: 2px solid #FFDA0F;
-  line-height: 1.2;
-  margin: 5px 0px;
-}
-
-#transaction-name:focus {
+#transaction-name, #transaction-value {
   color: white;
   font-size: 18px;
-  outline: none;
-}
-
-#transaction-value {
-  color: white;
   border: none;
   background-color: #0f0f0f;
   border-bottom: 2px solid #FFDA0F;
-  line-height: 1.2;
   margin: 5px 0px;
 }
 
-#transaction-value:focus {
+#transaction-name:focus, #transaction-value:focus {
   color: white;
   font-size: 18px;
   outline: none;
 }
 
 
-#credit,#debit {
+#credit, #debit {
   accent-color: #FFDA0F;
 }
 
@@ -174,11 +160,4 @@ h2 {
 
 .logo-balance {
   font-size: 40px;
-}
-
-.show-balance {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 10px;
 }
