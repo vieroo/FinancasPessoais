@@ -59,10 +59,10 @@
   ],
   "transactions": [
     {
-      "id": 1,
       "transactionName": "Freelancer",
       "transactionValue": 100,
-      "transactionType": "credit"
+      "transactionType": "credit",
+      "id": 1
     },
     {
       "transactionName": "Pizza",

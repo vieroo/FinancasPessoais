@@ -165,3 +165,38 @@ h2 {
 .transactions-history {
   color: white;
 }
+
+.show-balance {
+  margin: 0.5rem 2rem;
+}
+
+.hr {
+  border: 1px solid #FFDA0F;
+  margin: 0.5rem 0;
+}
+
+.transactions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 2rem;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+}
+
+.credit {
+  color: greenyellow;
+}
+
+.debit {
+  color: red;
+}
+
+.footer {
+  background-color: #0f0f0f;
+  display: flex;
+  justify-content: space-around;
+}
