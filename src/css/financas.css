@@ -200,3 +200,17 @@ h2 {
   display: flex;
   justify-content: space-around;
 }
+
+.footer-links, ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5rem;
+  font-size: 35px;
+  list-style: none;
+}
+
+a:hover {
+  color: #FFDA0F;
+}
