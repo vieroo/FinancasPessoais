@@ -65,10 +65,16 @@
       "transactionType": "credit"
     },
     {
-      "transactionName": "Teste",
-      "transactionValue": -10,
+      "transactionName": "Pizza",
+      "transactionValue": -50,
       "transactionType": "debit",
       "id": 2
+    },
+    {
+      "transactionName": "Salaraio",
+      "transactionValue": 1500,
+      "transactionType": "credit",
+      "id": 3
     }
   ]
 }
