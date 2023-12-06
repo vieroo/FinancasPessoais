@@ -59,16 +59,22 @@
   ],
   "transactions": [
     {
-      "id": 1,
       "transactionName": "Freelancer",
       "transactionValue": 100,
-      "transactionType": "credit"
+      "transactionType": "credit",
+      "id": 1
     },
     {
       "transactionName": "Teste",
       "transactionValue": -10,
       "transactionType": "debit",
       "id": 2
+    },
+    {
+      "transactionName": "Teste",
+      "transactionValue": -500,
+      "transactionType": "debit",
+      "id": 3
     }
   ]
 }

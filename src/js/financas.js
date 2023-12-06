@@ -1,6 +1,10 @@
 let transactions = []
 
-
+const formater = new Intl.NumberFormat('pt-BR', {
+  compactDisplay: 'long',
+  style: 'currency',
+  currency: 'BRL'
+})
 
 function createTransactionContainer(id) {
   const container = document.createElement('div')
@@ -9,8 +13,6 @@ function createTransactionContainer(id) {
   return container
 }
 
-
-
 function createTransactionName(transactionName) {
   const name = document.createElement('p')
   name.classList.add('transaction-name')
@@ -18,16 +20,8 @@ function createTransactionName(transactionName) {
   return name
 }
 
-
-
 function createTransactionValue(transactionValue, transactionType) {
   const value = document.createElement('span')
-
-  const formater = new Intl.NumberFormat('pt-BR', {
-    compactDisplay: 'long',
-    style: 'currency',
-    currency: 'BRL'
-  })
 
   const valueFormated = formater.format(transactionValue)
 
@@ -42,8 +36,6 @@ function createTransactionValue(transactionValue, transactionType) {
   return value
 }
 
-
-
 // Renderizar/Mostrar transações na tela
 function renderTransaction(transaction) {
   const container = createTransactionContainer(transaction.id)
@@ -53,8 +45,6 @@ function renderTransaction(transaction) {
   container.append(name, value)
   document.querySelector('#transactions-history').append(container)
 }
-
-
 
 // Função para salvar as transações
 async function saveTransaction(ev) {
@@ -66,7 +56,6 @@ async function saveTransaction(ev) {
   const transactionType = document.querySelector('input[name="transaction-type"]:checked').id
 
   transactionValue = transactionType === 'debit' ? -(transactionValue) : +(transactionValue);
-
 
   // Verifica se já existe transacao, se tiver atualiza o valor
   if (id) {
@@ -98,8 +87,24 @@ async function saveTransaction(ev) {
     renderTransaction(transaction)
   }
 
-  //ev.target.reset()
-  //updateBalance() // Atualizar o valor do saldo, falta criar ainda
+}
+
+async function updateBalance(){
+  
+  let i = 0
+  let valor = 0
+  const balance = document.getElementById('balance')
+  
+  const transactions = await fetch('http://localhost:3000/transactions')
+  .then((res) => res.json())
+  
+  transactions.forEach(()=>{
+      valor += transactions[i].transactionValue 
+      i += 1
+  })
+  
+  const valueFormated = formater.format(valor)
+  balance.innerHTML = valueFormated
 }
 
 
@@ -109,15 +114,12 @@ async function fetchTransaction(){
   return await fetch('http://localhost:3000/transactions').then((res) => res.json())
 }
 
-
-
 async function setup(){
   const results = await fetchTransaction()
   transactions.push(...results)
   transactions.forEach(renderTransaction)
 }
 
-
-
 document.addEventListener('DOMContentLoaded', setup)
 document.querySelector('form').addEventListener('submit', saveTransaction)
+
