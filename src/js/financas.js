@@ -45,6 +45,7 @@ function createEditTransactionBtn(transaction) {
     document.querySelector('#transaction-id').value = transaction.id
     document.querySelector('#transaction-name').value = transaction.transactionName
     document.querySelector('#transaction-value').value = transaction.transactionValue
+
     if (transaction.transactionType == 'debit') {
       document.querySelector('#debit').checked =  true
     } else {
@@ -144,4 +145,3 @@ async function setup(){
 
 document.addEventListener('DOMContentLoaded', setup)
 document.querySelector('form').addEventListener('submit', saveTransaction)
-
