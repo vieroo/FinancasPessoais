@@ -93,6 +93,12 @@
       "transactionValue": -2222,
       "transactionType": "debit",
       "id": 6
+    },
+    {
+      "transactionName": "Mercado",
+      "transactionValue": -500,
+      "transactionType": "debit",
+      "id": 7
     }
   ]
 }

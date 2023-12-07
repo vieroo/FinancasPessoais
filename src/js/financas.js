@@ -36,13 +36,33 @@ function createTransactionValue(transactionValue, transactionType) {
   return value
 }
 
+// Criar o botao de Editar a transação
+function createEditTransactionBtn(transaction) {
+  const editBtn = document.createElement('button')
+  editBtn.classList.add('edit-btn')
+  editBtn.textContent = 'Editar'
+  editBtn.addEventListener('click', () => {
+    document.querySelector('#transaction-id').value = transaction.id
+    document.querySelector('#transaction-name').value = transaction.transactionName
+    document.querySelector('#transaction-value').value = transaction.transactionValue
+    if (transaction.transactionType == 'debit') {
+      document.querySelector('#debit').checked =  true
+    } else {
+      document.querySelector('#credit').checked = true
+    }
+  })
+
+  return editBtn
+}
+
 // Renderizar/Mostrar transações na tela
 function renderTransaction(transaction) {
   const container = createTransactionContainer(transaction.id)
   const name = createTransactionName(transaction.transactionName)
   const value = createTransactionValue(transaction.transactionValue, transaction.transactionType)
+  const editBtn = createEditTransactionBtn(transaction)
 
-  container.append(name, value)
+  container.append(name, value, editBtn)
   document.querySelector('#transactions-history').append(container)
 }
 
