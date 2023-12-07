@@ -198,15 +198,30 @@ h2 {
 .footer {
   background-color: #0f0f0f;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Chau Philomene One', sans-serif;
 }
 
 .footer-links, ul {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  column-gap: 5rem;
   font-size: 35px;
   list-style: none;
 }

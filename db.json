@@ -71,10 +71,22 @@
       "id": 2
     },
     {
-      "transactionName": "Salaraio",
+      "transactionName": "Salario",
       "transactionValue": 1500,
       "transactionType": "credit",
       "id": 3
+    },
+    {
+      "transactionName": "Fatura Cartao",
+      "transactionValue": -100,
+      "transactionType": "debit",
+      "id": 4
+    },
+    {
+      "transactionName": "Freelancer",
+      "transactionValue": 5000,
+      "transactionType": "credit",
+      "id": 5
     }
   ]
 }
