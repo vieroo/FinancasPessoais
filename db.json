@@ -87,6 +87,12 @@
       "transactionValue": 5000,
       "transactionType": "credit",
       "id": 5
+    },
+    {
+      "transactionName": "rafael",
+      "transactionValue": -2222,
+      "transactionType": "debit",
+      "id": 6
     }
   ]
 }

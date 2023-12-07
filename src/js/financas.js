@@ -1,4 +1,4 @@
-let transactions = []
+const transactions = []
 
 const formater = new Intl.NumberFormat('pt-BR', {
   compactDisplay: 'long',
@@ -93,17 +93,12 @@ async function saveTransaction(ev) {
 
 async function updateBalance(){
 
-  let i = 0
-  let valor = 0
   const balance = document.getElementById('balance')
 
   const transactions = await fetch('http://localhost:3000/transactions')
   .then((res) => res.json())
 
-  transactions.forEach(()=>{
-      valor += transactions[i].transactionValue
-      i += 1
-  })
+  const valor = transactions.reduce((prevValor, transacao) => prevValor + transacao.transactionValue, 0)
 
   if (valor >=0 ) {
     balance.classList.add('credit')
@@ -114,8 +109,6 @@ async function updateBalance(){
   const valueFormated = formater.format(valor)
   balance.innerHTML = valueFormated
 }
-
-
 
 // Buscar retorno transações
 async function fetchTransaction(){
