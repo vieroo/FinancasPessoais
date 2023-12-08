@@ -51,6 +51,8 @@ function createEditTransactionBtn(transaction) {
     } else {
       document.querySelector('#credit').checked = true
     }
+
+    document.getElementById('add-transaction').scrollIntoView()
   })
 
   return editBtn
