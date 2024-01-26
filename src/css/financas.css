@@ -122,7 +122,7 @@ h2 {
   padding: 10px;
 }
 
-#save-transaction, .edit-btn {
+#save-transaction, .edit-btn, .delete-btn {
   width: 100px;
   text-transform: uppercase;
   color: black;
@@ -137,7 +137,7 @@ h2 {
   cursor: pointer;
 }
 
-#save-transaction:hover, .edit-btn:hover {
+#save-transaction:hover, .edit-btn:hover, .delete-btn:hover {
   width: 100px;
   color:  white;
   transform: scale(1.1);

@@ -58,14 +58,32 @@ function createEditTransactionBtn(transaction) {
   return editBtn
 }
 
+
+// Criar botão de remover transação
+function createDeleteTransactionBtn(id) {
+  const deleteBtn = document.createElement('button')
+  deleteBtn.classList.add('delete-btn')
+  deleteBtn.textContent = 'Excluir'
+  deleteBtn.addEventListener('click', async () => {
+    await fetch(`https://localhost:3000/transactions/${id}`, {method: 'DELETE'})
+    deleteBtn.parentElement.remove
+    const indexToRemove = transactions.findIndex((t) => t.id === id)
+    transactions.splice(indexToRemove, 1)
+    updateBalance()
+  })
+  return deleteBtn
+}
+
+
 // Renderizar/Mostrar transações na tela
 function renderTransaction(transaction) {
   const container = createTransactionContainer(transaction.id)
   const name = createTransactionName(transaction.transactionName)
   const value = createTransactionValue(transaction.transactionValue, transaction.transactionType)
   const editBtn = createEditTransactionBtn(transaction)
+  const deleteBtn = createDeleteTransactionBtn(transaction.id)
 
-  container.append(name, value, editBtn)
+  container.append(name, value, editBtn, deleteBtn)
   document.querySelector('#transactions-history').append(container)
 }
 
