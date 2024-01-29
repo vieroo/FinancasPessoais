@@ -184,7 +184,8 @@ h2 {
 }
 
 .transaction {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
   justify-content: space-between;
 }
 
@@ -218,6 +219,11 @@ h2 {
   font-family: 'Chau Philomene One', sans-serif;
 }
 
+.footer-links {
+  display: grid;
+  place-content: center;
+}
+
 .footer-links, ul {
   display: flex;
   flex-direction: row;
@@ -225,6 +231,11 @@ h2 {
   align-items: center;
   font-size: 35px;
   list-style: none;
+  column-gap: 30px;
+}
+
+.footer-links > ul > li > i:hover  {
+  color: #FFDA0F;
 }
 
 a:hover {

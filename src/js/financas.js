@@ -65,7 +65,7 @@ function createDeleteTransactionBtn(id) {
   deleteBtn.classList.add('delete-btn')
   deleteBtn.textContent = 'Excluir'
   deleteBtn.addEventListener('click', async () => {
-    await fetch(`https://localhost:3000/transactions/${id}`, {method: 'DELETE'})
+    await fetch(`http://localhost:3000/transactions/${id}`, {method: 'DELETE'})
     deleteBtn.parentElement.remove
     const indexToRemove = transactions.findIndex((t) => t.id === id)
     transactions.splice(indexToRemove, 1)
